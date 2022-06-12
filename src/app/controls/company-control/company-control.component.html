@@ -1,0 +1,37 @@
+<!-- material table to admin companies-->
+<mat-card>
+    <mat-grid-list cols="5" rowHeight="300px">
+        <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let company of companies">
+            <mat-card class="card">
+                <mat-card-header>
+                    <mat-card-title class="m3">{{company.name}}</mat-card-title>
+                    <mat-card-subtitle>{{company.description}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../assets/{{company.name}}.png" class="logotype">
+                <mat-card-content>
+                    <p class="compact">
+                        <mat-icon>phone</mat-icon>{{company.phone}}</p>
+                    <p class="compact">
+                        <mat-icon>domain</mat-icon>{{company.address}}</p>
+                    <p class="compact">
+                        <mat-icon>public</mat-icon>{{company.website}}</p>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">
+            <mat-card class="card">
+                <mat-card-header>
+                    <mat-card-title class="m3">
+                        <mat-icon>domain</mat-icon> New Company</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <h1 class="compact">
+                        <mat-icon>add</mat-icon>
+                    </h1>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-paginator [pageSizeOptions]="[5]" showFirstLastButtons></mat-paginator>
+</mat-card>

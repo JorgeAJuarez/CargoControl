@@ -1,0 +1,19 @@
+.login-box {
+    width: 300px;
+    height: 300px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.login-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.mat-form-field {
+    width: 100%;
+}

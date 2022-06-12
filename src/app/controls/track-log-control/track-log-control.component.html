@@ -1,0 +1,13 @@
+<p>track-log-control works!</p>
+<div class="container">
+    <!--mat-steper for track chekpoints-->
+    <mat-vertical-stepper [linear]="true" #stepper>
+        <mat-step *ngFor="let checkpoint of checkpoints">
+            <ng-template matStepLabel>{{checkpoint.Date}} {{checkpoint.Place}} {{checkpoint.Action}}</ng-template>
+            <div *ngIf="checkpoint.Goal">
+                <img/>
+                <p>llegada a destino</p>
+            </div>
+        </mat-step>
+    </mat-vertical-stepper>
+</div>

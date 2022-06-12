@@ -1,0 +1,22 @@
+<!--app-company-control></app-company-control>
+<app-track-control></app-track-control>
+<app-track-log-control></app-track-log-control>
+<app-pki-control></app-pki-control>
+<app-company-form></app-company-form-->
+
+<mat-grid-list cols="12" rowHeight="100px">
+    <mat-grid-tile [colspan]="9" [rowspan]="4">
+        <app-map-control class="fillControl"></app-map-control>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="3" [rowspan]="4">
+        <app-track-control class="fillControl"></app-track-control>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="9" [rowspan]="7">
+        <app-company-control class="fillControl"></app-company-control>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="3" [rowspan]="6">
+        <app-pki-control class="fillControl"></app-pki-control>
+    </mat-grid-tile>
+
+</mat-grid-list>

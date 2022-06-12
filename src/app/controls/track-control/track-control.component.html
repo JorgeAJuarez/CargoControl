@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="box">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Tracks</mat-card-title>
+                <mat-card-subtitle>
+                    <button mat-raised-button color="accent" (click)="addTrack()">
+                    <mat-icon>add</mat-icon> Add Track
+                </button>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-table id="tracks-table" [dataSource]="tracks">
+                <ng-container matColumnDef="name">
+                    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+                    <mat-cell *matCellDef="let track">{{track.name}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="description">
+                    <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+                    <mat-cell *matCellDef="let track">{{track.description}}</mat-cell>
+                </ng-container>
+                <ng-container matColumnDef="actions">
+                    <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+                    <mat-cell *matCellDef="let track">
+                        <button mat-button color="accent" (click)="onEdit(track)">
+                            <mat-icon>flag</mat-icon>
+                        </button>
+                        <!--button mat-raised-button color="warn" (click)="onDelete(track)">
+                            <mat-icon>delete</mat-icon> 
+                        </button-->
+                    </mat-cell>
+                </ng-container>
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+            </mat-table>
+            <!--pagination-->
+            <mat-paginator [pageSizeOptions]="[5, 10, 20, 50]" showFirstLastButtons></mat-paginator>
+        </mat-card>
+    </div>

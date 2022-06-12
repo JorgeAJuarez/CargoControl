@@ -1,0 +1,36 @@
+.box {
+    width: 98%;
+    height: 98%;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6px;
+}
+
+.logotype {
+    max-width: 145px;
+    height: 145px;
+    border-radius: 2px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.m3 {
+    margin-top: 12px;
+}
+
+.card {
+    width: 90%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6px;
+    align-items: center;
+    background-color: rgb(104, 104, 104);
+}
+
+.compact {
+    margin: 2px;
+}

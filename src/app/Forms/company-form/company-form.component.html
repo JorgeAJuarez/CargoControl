@@ -1,0 +1,59 @@
+<p>company-form works!</p>
+<!-- new company form -->
+<form>
+    <!--[formGroup]="companyForm" (ngSubmit)="onSubmit()"-->
+    <div class="container">
+        <div class="box-table">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>
+                        <mat-icon>security</mat-icon>
+                        Nueva empresa
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-form-field>
+                        <input matInput placeholder="Nombre" formControlName="name">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Dirección" formControlName="address">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Teléfono" formControlName="phone">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Correo" formControlName="email">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="RUC" formControlName="ruc">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Razon social" formControlName="socialReason">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Nombre de contacto" formControlName="contactName">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Teléfono de contacto" formControlName="contactPhone">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Correo de contacto" formControlName="contactEmail">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Dirección de contacto" formControlName="contactAddress">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Página web" formControlName="web ">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Descripción" formControlName="description">
+                    </mat-form-field>
+                    <button mat-raised-button color="accent" type="submit">
+                        <mat-icon>save</mat-icon>
+                        Guardar
+                    </button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</form>

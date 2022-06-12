@@ -1,0 +1,11 @@
+<div *ngIf="apiLoaded | async">
+    <google-map [options]="options" width="100%">
+        <map-marker #marker="mapMarker" (mapClick)="openInfoWindow(marker, markerPosition.desc)" *ngFor="let markerPosition of markerPositionsDestiny" [position]="markerPosition.cords" [title]="markerPosition.desc" [options]="markerOptionsDestiny">
+        </map-marker>
+        <map-marker #marker="mapMarker" (mapClick)="openInfoWindowTrack(marker, markerPosition)" *ngFor="let markerPosition of markerPositionsCurrent" [position]="markerPosition.currentLocation" [options]="markerOptionsDelivery">
+        </map-marker>
+        <map-info-window>{{selectedmark}}</map-info-window>
+
+        <map-polyline *ngFor="let path of vertices" [options]="path.options" [path]="path.path"></map-polyline>
+    </google-map>
+</div>
